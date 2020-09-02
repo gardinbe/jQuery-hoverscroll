@@ -82,7 +82,7 @@ listElement.scroll(function() {
 ```
 
 ### manually fading in/out the element
-the scroller can be faded in or out manually by using animate.in() or animate.out(). these functions will automatically be called by check().
+the scroller can be manually faded in or out by using animate.in() or animate.out(), but these functions will automatically called by check() when needed.
 
 **example**
 
