@@ -1,1 +1,3 @@
 # hoverscroll
+
+## how to use
