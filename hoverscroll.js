@@ -3,7 +3,7 @@ function HoverScroller(elmt, side, list) {
 	
 	self.elmt = $(elmt);
 	self.side = side;
-	self.list = list;
+	self.list = $(list);
 	self.visible = ! self.elmt.hasClass("hidden");
 	
 	
