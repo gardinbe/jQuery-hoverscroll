@@ -1,5 +1,11 @@
 # hoverscroll
 
+used to scroll lists by hovering over an element
+
+## limitations
+
+can only scroll horizontally currently
+
 ## requirements
 jQuery 3.5.1+ **(not tested on previous versions)**
 
