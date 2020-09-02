@@ -37,7 +37,7 @@ let rightHoverScroll = new HoverScroll(rightHoverScrollID, "right", listElement)
 then we can access the following methods
 
 ### scrolling a list
-note: once scroll.start() has been called, the list will not stop scrolling until scroll.stop() is called
+note: once scroll.start() has been called, the list will not stop scrolling until scroll.stop() is called.
 
 ```javascript
 scroll.start( (animation style, only if using jQuery UI) )
@@ -62,7 +62,8 @@ leftHoverScrollElement.hover(function() {
 ```
 
 ### check if the scrollers should be visible or not
-this function can show/hide the scroller, depending on the where the user is scrolled to in the list
+this function can show/hide the scroller, depending on the where the user is scrolled to in the list.
+
 it should be called by an onscroll event from the chosen list.
 
 **example**
@@ -75,7 +76,7 @@ listElement.scroll(function() {
 ```
 
 ### manually fading in/out the element
-the scroller can be faded in or out manually by using animate.in() or animate.out(). these functions will automatically be called by check()
+the scroller can be faded in or out manually by using animate.in() or animate.out(). these functions will automatically be called by check().
 
 **example**
 
