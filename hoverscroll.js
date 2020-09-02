@@ -11,24 +11,10 @@ function HoverScroller(elmt, direction, list) {
 	self.animate = {};
 	
 	self.animate.in = function() {
-		self.elmt.show();
-		self.elmt.css("opacity", "0");
-		self.elmt.animate({
-			opacity: 1,
-		}, 250, function() {
-			self.elmt.stop();
-			self.elmt.removeAttr("style");
-		});
+		self.elmt.fadeIn(250);
 	};
 	self.animate.out = function() {
-		self.elmt.css("opacity", "1");
-		self.elmt.animate({
-			opacity: 0,
-		}, 100, function() {
-			self.elmt.stop();
-			self.elmt.removeAttr("style");
-			self.elmt.hide();
-		});
+		self.elmt.fadeOut(100)
 	};
 	
 	
