@@ -1,35 +1,33 @@
-function HoverScroller(elmt, side, list) {
+function HoverScroller(elmt, direction, list) {
 	let self = this;
 	
 	self.elmt = $(elmt);
-	self.side = side;
+	self.direction = direction;
 	self.list = $(list);
-	self.visible = ! self.elmt.hasClass("hidden");
+	self.visible = ! (self.elmt.css("display") == "none" || self.elmt.css("visibility") == "hidden");
 	
 	
 	
 	self.animate = {};
 	
 	self.animate.in = function() {
-		self.elmt.removeClass("hidden");
+		self.elmt.show();
 		self.elmt.css("opacity", "0");
 		self.elmt.animate({
 			opacity: 1,
-			//right: "+=" + self.elmt.width(),
 		}, 250, function() {
 			self.elmt.stop();
 			self.elmt.removeAttr("style");
 		});
 	};
 	self.animate.out = function() {
-		self.elmt.css("opacity", "1"); // just for consistent code
+		self.elmt.css("opacity", "1");
 		self.elmt.animate({
 			opacity: 0,
-			//right: "-=" + self.elmt.width(),
 		}, 100, function() {
 			self.elmt.stop();
 			self.elmt.removeAttr("style");
-			self.elmt.addClass("hidden");
+			self.elmt.hide();
 		});
 	};
 	
@@ -38,12 +36,12 @@ function HoverScroller(elmt, side, list) {
 	self.check = function(initial = false) {
 		const scrollableWidth = self.list.prop("scrollWidth") - self.list.width();
 		if (scrollableWidth == 0) { // if list can't actually be scrolled
-			self.elmt.addClass("hidden");
+			self.elmt.hide();
 			self.visible = false;
 			return;
 		}
 		let atLimit; // bool (equals true when scrolled to limit)
-		switch (self.side) { // switch the limit/wall depending on scroll direction
+		switch (self.direction) { // switch the limit/wall depending on scroll direction
 			case "left":
 				atLimit = self.list.scrollLeft() == 0;
 				break;
@@ -55,12 +53,12 @@ function HoverScroller(elmt, side, list) {
 			if (atLimit) {
 				if (self.visible) {
 					//self.animate.out(self.elmt);
-					self.elmt.addClass("hidden");
+					self.elmt.hide();
 					self.visible = false;
 				}
 				
 			} else {
-				self.elmt.removeClass("hidden");
+				self.elmt.show();
 				self.visible = true;
 			}
 			return;
@@ -83,7 +81,7 @@ function HoverScroller(elmt, side, list) {
 	
 	self.scroll.start = function(animStyle="swing") {
 		let target, dist;
-		switch (self.side) {
+		switch (self.direction) {
 			case "left":
 				target = 0; // start of list
 				dist = self.list.scrollLeft(); // distance from start
