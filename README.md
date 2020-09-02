@@ -6,16 +6,20 @@ jQuery UI 1.12+ (only for custom animation styles, e.g easeInOutQuad etc) **(not
 
 ### how to use
 first, create a new object
+
 `let hoverScroll = new HoverScroll( (hover-scroll element id or jQuery object), (scroll direction), (list-to-be-scrolled element id or jQuery object) )`
 
 for example, if you want to create two hover scrollers for left and right scrolling, then it should look something like this
+
 `let listElement = $('#list');
 let leftHoverScrollElement = $('#left-hover-scroll');
 let rightHoverScrollElement = $('#right-hover-scroll');
 
 let leftHoverScroll = new HoverScroll(leftHoverScrollElement, "left", listElement)
 let rightHoverScroll = new HoverScroll(rightHoverScrollElement, "right", listElement)`
+
 or this
+
 `let listElement = $('#list');
 let leftHoverScrollID = 'left-hover-scroll';
 let rightHoverScrollID = 'right-hover-scroll';
@@ -29,12 +33,15 @@ then we can access the following methods
 note: once scroll.start() has been called, the list will not stop scrolling until scroll.stop() is called
 
 `scroll.start( (animation style, only if using jQuery UI) )`
+
 this will start the scrolling animation
 
 `scroll.stop()`
+
 this will stop the current scrolling animation
 
 *example*
+
 `$(function() {
 	
 	leftHoverScrollElement.hover(function() {
