@@ -2,6 +2,7 @@
 
 ## requirements
 jQuery 3.5.1+ **(not tested on previous versions)**
+
 jQuery UI 1.12+ (only for custom animation styles, e.g easeInOutQuad etc) **(not tested on previous versions)**
 
 ## how to use
