@@ -3,7 +3,7 @@
 ## requirements
 jQuery 3.5.1+ **(not tested on previous versions)**
 
-jQuery UI 1.12+ (only for custom animation styles, e.g easeInOutQuad etc) **(not tested on previous versions)**
+jQuery UI 1.12+ **(not tested on previous versions)** - only for custom animation styles, e.g easeInOutQuad etc)
 
 ## how to use
 first, create a new object
