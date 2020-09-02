@@ -8,7 +8,7 @@ jQuery UI 1.12+ (only for custom animation styles, e.g easeInOutQuad etc) **(not
 first, create a new object
 
 `
-let hoverScroll = new HoverScroll( (hover-scroll element id or jQuery object), (scroll direction), (list-to-be-scrolled element id or jQuery object) )
+let hoverScroll = new HoverScroll( (hover-scroll element id or jQuery object), (scroll direction), (list-to-be-scrolled element id or jQuery object) );
 `
 
 for example, if you want to create two hover scrollers for left and right scrolling, then it should look something like this
@@ -18,8 +18,8 @@ let listElement = $('#list');
 let leftHoverScrollElement = $('#left-hover-scroll');
 let rightHoverScrollElement = $('#right-hover-scroll');
 
-let leftHoverScroll = new HoverScroll(leftHoverScrollElement, "left", listElement)
-let rightHoverScroll = new HoverScroll(rightHoverScrollElement, "right", listElement)
+let leftHoverScroll = new HoverScroll(leftHoverScrollElement, "left", listElement);
+let rightHoverScroll = new HoverScroll(rightHoverScrollElement, "right", listElement);
 `
 
 or this
@@ -35,7 +35,7 @@ let rightHoverScroll = new HoverScroll(rightHoverScrollID, "right", listElement)
 
 then we can access the following methods
 
-###scrolling a list###
+### scrolling a list
 note: once scroll.start() has been called, the list will not stop scrolling until scroll.stop() is called
 
 `
@@ -50,7 +50,7 @@ scroll.stop()
 
 this will stop the current scrolling animation
 
-*example*
+**example**
 
 `
 leftHoverScrollElement.hover(function() {
@@ -60,11 +60,11 @@ leftHoverScrollElement.hover(function() {
 });
 `
 
-###check if the scrollers should be visible or not###
+### check if the scrollers should be visible or not
 this function can show/hide the scroller, depending on the where the user is scrolled to in the list
 it should be called by an onscroll event from the chosen list.
 
-*example*
+**example**
 
 `
 listElement.scroll(function() {
@@ -73,10 +73,10 @@ listElement.scroll(function() {
 });
 `
 
-**manually fading in/out the element**
+### manually fading in/out the element
 the scroller can be faded in or out manually by using animate.in() or animate.out(). these functions will automatically be called by check()
 
-*example*
+**example**
 
 `
 leftHoverScroll.animate.out();
