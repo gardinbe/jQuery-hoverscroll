@@ -26,12 +26,12 @@ let rightHoverScroll = new HoverScroll(rightHoverScrollElement, "right", listEle
 or this
 
 ```javascript
-let listElement = $('#list');
+let listID = 'list';
 let leftHoverScrollID = 'left-hover-scroll';
 let rightHoverScrollID = 'right-hover-scroll';
 
-let leftHoverScroll = new HoverScroll(leftHoverScrollID, "left", listElement);
-let rightHoverScroll = new HoverScroll(rightHoverScrollID, "right", listElement);
+let leftHoverScroll = new HoverScroll(leftHoverScrollID, "left", listID);
+let rightHoverScroll = new HoverScroll(rightHoverScrollID, "right", listID);
 ```
 
 then we can access the following methods
