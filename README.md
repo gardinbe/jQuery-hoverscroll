@@ -9,7 +9,7 @@ jQuery UI 1.12+ **(not tested on previous versions)** - only for custom animatio
 first, create a new object
 
 ```javascript
-let hoverScroll = new HoverScroll( (hover-scroller id/jQuery object), (scroll direction), (list id/jQuery object) );
+let hoverScroll = new HoverScroll( /*(hover-scroller id/jQuery object)*/, /*(scroll direction)*/, /*(list id/jQuery object)*/ );
 ```
 
 for example, if you want to create two hover scrollers for left and right scrolling, then it should look something like this
@@ -40,7 +40,7 @@ then we can access the following methods
 note: once scroll.start() has been called, the list will not stop scrolling until scroll.stop() is called.
 
 ```javascript
-scroll.start( (animation style, only if using jQuery UI) )
+scroll.start( /*(animation style, only if using jQuery UI)*/ )
 ```
 
 this will start the scrolling animation
