@@ -43,13 +43,11 @@ this will stop the current scrolling animation
 *example*
 
 `$(function() {
-	
 	leftHoverScrollElement.hover(function() {
 		leftHoverScroll.scroll.start();
 	}, function() {
 		leftHoverScroll.scroll.stop();
 	});
-	
 });`
 
 **check if the scrollers should be visible or not**
@@ -66,5 +64,7 @@ it should be called by an onscroll event from the chosen list.
 the scroller can be faded in or out manually by using animate.in() or animate.out(). these functions will automatically be called by check()
 
 *example*
-`leftHoverScroll.animate.out();
-rightHoverScroll.animate.in();`
+`
+leftHoverScroll.animate.out();
+rightHoverScroll.animate.in();
+`
