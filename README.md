@@ -45,17 +45,17 @@ then we can access the following methods
 ### scrolling a list
 note: once scroll.start() has been called, the list will not stop scrolling until scroll.stop() is called.
 
+this will start the scrolling animation
+
 ```javascript
 scroll.start( /*animation style, only for if using jQuery UI*/ )
 ```
 
-this will start the scrolling animation
+this will stop the current scrolling animation
 
 ```javascript
 scroll.stop()
 ```
-
-this will stop the current scrolling animation
 
 **example**
 
