@@ -65,7 +65,7 @@ function HoverScroller(elmt, direction, list) {
 	
 	self.scroll = {};
 	
-	self.scroll.start = function(animStyle="linear") {
+	self.scroll.start = function(easing="linear", pps=1500) { // pps = pixels per second
 		let target, dist;
 		switch (self.direction) {
 			case "left":
@@ -77,12 +77,11 @@ function HoverScroller(elmt, direction, list) {
 				dist = target - self.list.scrollLeft(); // distance from end
 				break;
 		}
-		const pps = 1450; // pixels per second
 		const dur = (dist / pps) * 1000; // calculated anim duration in seconds
 		self.list.animate({
 			scrollLeft: target
-		}, dur, animStyle, function() { // look at jQueryUI easings for different anim styles, eg. "easeInOutQuad"
-			self.list.stop(); // stop() probably isnt necessary here
+		}, dur, easing, function() {
+			self.list.stop(); // stop() probably isnt necessary here, but just in case
 		});
 	};
 	self.scroll.stop = function() {
