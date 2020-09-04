@@ -48,7 +48,7 @@ note: once scroll.start() has been called, the list will not stop scrolling unti
 this will start the scrolling animation
 
 ```javascript
-scroll.start( /*animation style, default="linear" - look at jQueryUI easings for more info*/ )
+scroll.start( /*jQuery easing method, default="linear" - look at jQueryUI easings for more info*/ )
 ```
 
 this will stop the current scrolling animation
