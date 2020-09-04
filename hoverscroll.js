@@ -65,7 +65,7 @@ function HoverScroller(elmt, direction, list) {
 	
 	self.scroll = {};
 	
-	self.scroll.start = function(animStyle="swing") {
+	self.scroll.start = function(animStyle="linear") {
 		let target, dist;
 		switch (self.direction) {
 			case "left":
