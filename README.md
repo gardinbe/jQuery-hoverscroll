@@ -49,7 +49,7 @@ this will start the scrolling animation
 
 ```javascript
 scroll.start( /*easing method, default="linear"*/, /*pixels/second, default = 1500*/ )
-// look at jQueryUI easings for more info. here are examples of the different options :https://matthewlein.com/tools/jquery-easing
+// look at jQueryUI easings for more info. here are examples of the different options: https://matthewlein.com/tools/jquery-easing
 ```
 
 this will stop the current scrolling animation
