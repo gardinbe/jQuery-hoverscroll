@@ -65,7 +65,7 @@ function HoverScroller(elmt, direction, list) {
 	
 	self.scroll = {};
 	
-	self.scroll.start = function(easing="linear", pps=1500) { // pps = pixels per second
+	self.scroll.start = function(easing="linear", pps=1000) { // pps = pixels per second
 		let target, dist;
 		switch (self.direction) {
 			case "left":
