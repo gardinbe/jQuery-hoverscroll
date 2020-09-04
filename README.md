@@ -9,7 +9,7 @@ can only scroll horizontally currently
 ## requirements
 jQuery 3.5.1+ **(not tested on previous versions)**
 
-jQuery UI 1.12+ **(not tested on previous versions)** - only for custom animation styles, e.g easeInOutQuad etc)
+jQuery UI 1.12+ **(not tested on previous versions)** - only for extra custom animation styles/easings, e.g easeInOutQuad etc)
 
 ## how to use
 first, create a new object
@@ -48,7 +48,7 @@ note: once scroll.start() has been called, the list will not stop scrolling unti
 this will start the scrolling animation
 
 ```javascript
-scroll.start( /*animation style, only for if using jQuery UI*/ )
+scroll.start( /*animation style, default="linear" - look at jQueryUI easings for more info*/ )
 ```
 
 this will stop the current scrolling animation
