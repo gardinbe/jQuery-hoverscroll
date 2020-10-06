@@ -1,7 +1,5 @@
 # hoverscroll
 
-used to scroll lists by hovering over an element
-
 ## limitations
 
 can only scroll horizontally currently
